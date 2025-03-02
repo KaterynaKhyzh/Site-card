@@ -1,38 +1,116 @@
-.App {
+body {
+  margin: 0;
+  font-family: "Poppins";
+  background: linear-gradient(to right, #ad91ab, #905f8c);
+  color: #f9f9f9;
+}
+
+header {
   text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.photos {
+  background-color: #f9f9f9;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  overflow: hidden;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.photo-wrapper {
+  display: flex;
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scrollLeft 30s linear infinite;
 }
 
-@keyframes App-logo-spin {
+@keyframes scrollLeft {
   from {
-    transform: rotate(0deg);
+    transform: translateX(0);
   }
   to {
-    transform: rotate(360deg);
+    transform: translateX(-10%);
   }
+}
+
+.photo-item {
+  border-radius: 10px;
+  width: 350px;
+  height: auto;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.skills-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+
+.skills-section div {
+  width: 45%;
+}
+
+.skills-section h2 {
+  text-align: center;
+  font-size: 30px;
+}
+
+.skills-section li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.skills-section li div {
+  width: 100%;
+  height: 12px;
+  background-color: #ddddddd0;
+  margin-left: 40px;
+  border-radius: 10px;
+}
+
+.skills-section li div span {
+  display: block;
+  height: 100%;
+  background-color: #63485c;
+  border-radius: 10px;
+}
+.interests {
+  background-color: #ffffff;
+  color: #905f8c;
+  padding: 40px 0;
+  font-size: 18px;
+}
+
+.interests h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.interests ul {
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.interests li {
+  width: 45%;
+  text-align: justify;
+  padding: 25px;
+}
+
+.footer {
+  text-align: right;
+  margin-right: 15px;
+  padding: 15px 0;
+  font-size: 15px;
 }
